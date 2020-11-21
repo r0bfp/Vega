@@ -1,0 +1,160 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  font-family: "Montserrat";
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #222831;
+}
+
+#header {
+  width: 100%;
+  height: 80px;
+  border-bottom: 4px solid #313742;
+}
+#header #menu-toolbar {
+  height: 100%;
+}
+#header #menu-toolbar ul {
+  display: flex;
+  justify-content: center;
+  justify-items: end;
+  height: 100%;
+}
+#header #menu-toolbar ul .toolbar-contents {
+  margin: 0 10px;
+  display: flex;
+}
+#header #menu-toolbar ul .toolbar-contents li {
+  cursor: pointer;
+}
+#header #menu-toolbar ul .toolbar-contents li a {
+  color: #dbdada;
+  transition: 80ms linear;
+}
+#header #menu-toolbar ul .toolbar-contents.first {
+  position: relative;
+}
+#header #menu-toolbar ul .toolbar-contents.first li:nth-child(1) a {
+  color: #29a19c;
+  animation-name: initial-link;
+  animation-duration: 500ms;
+}
+#header #menu-toolbar ul .toolbar-contents.first li {
+  width: 100px;
+  text-align: center;
+  padding: 0 10px;
+  padding-top: 40px;
+}
+#header #menu-toolbar ul .toolbar-contents.first #bar {
+  width: 100px;
+  height: 4px;
+  bottom: -4px;
+  position: absolute;
+  background-color: #29a19c;
+  left: 0;
+  transition: 120ms ease-in-out;
+  animation-name: initial-bar;
+  animation-duration: 300ms;
+  animation-fill-mode: backwards;
+}
+#header #menu-toolbar ul .toolbar-contents.second .open-dropdown {
+  color: #dbdada;
+  background-color: #29a19c;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 10px;
+  margin: 28px 5px 0 5px;
+  cursor: pointer;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+#header #menu-toolbar ul .toolbar-contents.second .open-dropdown span {
+  display: inline-block;
+  transition: 200ms ease-in-out;
+}
+#header #menu-toolbar ul .toolbar-contents.second .open-dropdown:hover {
+  transition: 90ms ease-in-out;
+  background-color: #1f7471;
+}
+#header #menu-toolbar ul .toolbar-contents.second .open-dropdown:active {
+  transform: scale(0.9);
+}
+#header #menu-toolbar ul .toolbar-contents.second .dropdown-menu ul {
+  position: absolute;
+  z-index: 100;
+  flex-direction: column;
+  margin: 5px 10px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  overflow: hidden;
+  display: none;
+  animation: show-dropdown 180ms ease alternate forwards;
+  transform-origin: top left;
+  background-color: #29a19c;
+}
+#header #menu-toolbar ul .toolbar-contents.second .dropdown-menu ul li {
+  padding: 10px 20px;
+  transition: 90ms ease-in-out;
+}
+#header #menu-toolbar ul .toolbar-contents.second .dropdown-menu ul li:hover {
+  background-color: #1f7471;
+}
+#header #menu-toolbar ul .toolbar-contents.second .dropdown-menu.genero ul {
+  height: 355px;
+}
+#header #menu-toolbar ul .toolbar-contents.second .dropdown-menu.ordernar ul {
+  height: 78px;
+}
+#header #menu-toolbar ul .toolbar-contents.second .open-dropdown.ordernar {
+  background-color: #29a19c;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+}
+#header #menu-toolbar ul .toolbar-contents.second .open-dropdown.ordernar:hover {
+  transition: 90ms ease-in-out;
+  background-color: #1f7471;
+}
+
+/*------------------- animações -------------------*/
+@keyframes initial-bar {
+  from {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes initial-link {
+  from {
+    color: #dbdada;
+  }
+  to {
+    color: #29a19c;
+  }
+}
+@keyframes show-dropdown {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Vega</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <script src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+</head>
+<body>
+    <div id='header'>
+        <nav id="menu-toolbar">
+            <ul>
+                <div class="toolbar-contents first">
+                    <li class='menubar-link' onclick='selectStyle(this)'><a href="#">Filmes</a></li>
+                    <li class='menubar-link' onclick='selectStyle(this)'><a href="#">Séries</a></li>
+                    <li class='menubar-link' onclick='selectStyle(this)'><a href="#">Animes</a></li>
+                    <div id="bar"></div>
+                </div>
+                <div class="toolbar-contents second">
+                    <div class="dropdown-container">
+                        <button class="open-dropdown genero" onclick="toggleDropdownMenu(this)">
+                            Gênero
+                            <span>
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </button>
+                        <div class="dropdown-menu genero">
+                            <ul>
+                                <li><a href="#">Ação</a></li>
+                                <li><a href="#">Aventura</a></li>
+                                <li><a href="#">Documentário</a></li>
+                                <li><a href="#">Comédia</a></li>
+                                <li><a href="#">Drama</a></li>
+                                <li><a href="#">Fantasia</a></li>
+                                <li><a href="#">Ficção científica</a></li>
+                                <li><a href="#">Romance</a></li>
+                                <li><a href="#">Terror</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown-container">
+                        <button class="open-dropdown ordernar" onclick="toggleDropdownMenu(this)">
+                            Ordernar por
+                            <span>
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </button>
+                        <div class="dropdown-menu ordernar">
+                            <ul>
+                                <li><a href="#">Populares</a></li>
+                                <li><a href="#">Recentes</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </div>
+    <div class="main">
+        
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
+<!-- 
+#313742
+#29a19c
+#dbdada
+
+
+ -->
